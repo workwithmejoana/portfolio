@@ -1,438 +1,367 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Joana Roqueza — GoHighLevel & Funnel Systems</title>
-<meta name="description" content="Websites, funnels, and automations for coaches and service businesses — built to run without you.">
-
-<!-- ============================================================
-     HOW TO EDIT THIS PAGE (plain-language guide):
-     Search for the word  EDIT:  to find every spot you can change.
-     - Your name / brand ............ search "EDIT: brand"
-     - Your email + booking link .... search "EDIT: contact"
-     - Testimonials ................. search "EDIT: testimonial"
-     - Your work screenshots ........ search "EDIT: work"
-     - Your short bio ............... search "EDIT: bio"
-     Prices are already set. To change one, search "EDIT: price".
-     ============================================================ -->
-
+<title>Joana Roqueza — Websites, Funnels &amp; Automation</title>
+<meta name="description" content="Websites, funnels, CRM and automation for coaches and service businesses — built with you, not sold at you. Book a free 30-minute call.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#122A2E;          /* deep petrol base */
-    --ink-2:#1A3A3F;        /* raised surface on dark */
-    --ink-3:#0D1F22;        /* deepest, for footer */
-    --ivory:#F4EEE1;        /* warm light surface */
-    --ivory-2:#EAE1CE;      /* slightly deeper ivory */
-    --honey:#DFA23A;        /* premium amber accent */
-    --honey-soft:#F0C87E;
-    --teal:#5AB394;         /* fresh "active/go" accent */
-    --muted:#94A8A5;        /* muted text on dark */
-    --line:rgba(244,238,225,.14);
-
-    --display:"Bricolage Grotesque", "Trebuchet MS", sans-serif;
-    --body:"Inter", system-ui, -apple-system, sans-serif;
-    --mono:"IBM Plex Mono", ui-monospace, monospace;
-
-    --wrap:1140px;
+    --bg: oklch(0.955 0.021 78.5);
+    --ink: oklch(0.26 0.02 55);
+    --primary: oklch(0.208 0.014 60);
+    --primary-fg: oklch(0.955 0.021 78.5);
+    --muted-fg: oklch(0.535 0.028 68);
+    --surface: oklch(0.917 0.028 76);
+    --surface-deep: oklch(0.844 0.043 74);
+    --clay: oklch(0.605 0.065 55);
+    --line: oklch(0.26 0.02 55 / 14%);
+    --shadow-soft: 0 6px 18px oklch(0.208 0.014 60 / 0.18);
+    --shadow-lift: 0 10px 24px oklch(0.208 0.014 60 / 0.24);
+    --font-display: "Fraunces", Georgia, serif;
+    --font-body: "Inter", system-ui, -apple-system, sans-serif;
   }
-
-  *{box-sizing:border-box;margin:0;padding:0}
+  *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{
-    font-family:var(--body);
-    background:var(--ink);
-    color:var(--ivory);
-    line-height:1.6;
-    -webkit-font-smoothing:antialiased;
-    overflow-x:hidden;
-  }
-  a{color:inherit;text-decoration:none}
-  img{max-width:100%;display:block}
+  body{background:var(--bg);color:var(--ink);font-family:var(--font-body);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  a{text-decoration:none;color:inherit}
+  img{display:block}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 28px}
+  .eyebrow{font-family:var(--font-display);font-style:italic;font-weight:500;font-size:.95rem;color:var(--clay)}
+  .btn-primary{display:inline-block;border-radius:999px;padding:11px 22px;font-size:.9rem;font-weight:600;background:var(--primary);color:var(--primary-fg);box-shadow:var(--shadow-soft);transition:transform .15s ease,box-shadow .2s ease}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:var(--shadow-lift)}
+  .btn-ghost{display:inline-block;border-radius:999px;padding:11px 22px;font-size:.9rem;font-weight:600;border:1px solid var(--primary);color:var(--primary);transition:all .2s ease}
+  .btn-ghost:hover{background:var(--primary);color:var(--primary-fg)}
 
-  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 28px}
-
-  .eyebrow{
-    font-family:var(--mono);
-    font-size:.72rem;
-    letter-spacing:.22em;
-    text-transform:uppercase;
-    color:var(--honey);
-  }
-
-  /* ---------- NAV ---------- */
-  nav{
-    position:sticky;top:0;z-index:50;
-    background:rgba(18,42,46,.82);
-    backdrop-filter:blur(10px);
-    border-bottom:1px solid var(--line);
-  }
-  .nav-in{display:flex;align-items:center;justify-content:space-between;height:68px}
-  /* EDIT: brand — change the name/mark below */
-  .brand{font-family:var(--display);font-weight:700;font-size:1.15rem;letter-spacing:-.01em}
-  .brand span{color:var(--honey)}
-  .nav-links{display:flex;gap:30px;align-items:center}
-  .nav-links a{font-size:.9rem;color:var(--muted);transition:color .2s}
-  .nav-links a:hover{color:var(--ivory)}
-  .btn{
-    font-family:var(--body);font-weight:600;font-size:.9rem;
-    padding:11px 20px;border-radius:999px;cursor:pointer;
-    display:inline-block;transition:transform .15s ease, box-shadow .2s ease;
-    border:none;
-  }
-  .btn-gold{background:var(--honey);color:var(--ink);box-shadow:0 6px 20px rgba(223,162,58,.25)}
-  .btn-gold:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(223,162,58,.35)}
-  .btn-ghost{border:1px solid var(--line);color:var(--ivory)}
-  .btn-ghost:hover{border-color:var(--honey);color:var(--honey)}
-  .nav-toggle{display:none;background:none;border:none;color:var(--ivory);cursor:pointer}
-
-  /* ---------- HERO ---------- */
-  header.hero{position:relative;padding:96px 0 88px;overflow:hidden}
-  /* signature: faint pipeline/flow grid — echoes funnels & automations */
-  .hero-grid{
-    position:absolute;inset:0;z-index:0;opacity:.5;
-    background-image:
-      linear-gradient(var(--line) 1px, transparent 1px),
-      linear-gradient(90deg, var(--line) 1px, transparent 1px);
-    background-size:48px 48px;
-    -webkit-mask-image:radial-gradient(ellipse 80% 60% at 70% 30%, #000 20%, transparent 75%);
-    mask-image:radial-gradient(ellipse 80% 60% at 70% 30%, #000 20%, transparent 75%);
-  }
-  .hero-in{position:relative;z-index:1;max-width:820px}
-  .hero h1{
-    font-family:var(--display);font-weight:700;
-    font-size:clamp(2.5rem,6vw,4.4rem);
-    line-height:1.02;letter-spacing:-.02em;
-    margin:20px 0 22px;
-  }
-  .hero h1 .accent{color:var(--honey);font-style:italic}
-  .hero .lede{font-size:clamp(1.05rem,2vw,1.25rem);color:#D8D2C4;max-width:620px;margin-bottom:34px}
-  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
-  .hero-note{font-family:var(--mono);font-size:.78rem;color:var(--muted);margin-top:26px}
-
-  /* ---------- SERVICES ---------- */
-  section{padding:84px 0}
-  .sec-head{max-width:640px;margin-bottom:48px}
-  .sec-head h2{font-family:var(--display);font-weight:700;font-size:clamp(1.8rem,3.6vw,2.6rem);letter-spacing:-.015em;margin:12px 0 10px;line-height:1.1}
-  .sec-head p{color:var(--muted);font-size:1.02rem}
-
-  .services{background:var(--ink-2)}
-  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden}
-  .svc{background:var(--ink-2);padding:30px 26px}
-  .svc .n{font-family:var(--mono);font-size:.75rem;color:var(--teal)}
-  .svc h3{font-family:var(--display);font-weight:600;font-size:1.15rem;margin:14px 0 8px}
-  .svc p{color:var(--muted);font-size:.92rem}
-
-  /* ---------- PACKAGES ---------- */
-  .pkg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch}
-  .pkg{
-    background:var(--ink-2);border:1px solid var(--line);
-    border-radius:20px;padding:34px 28px;display:flex;flex-direction:column;
-    position:relative;transition:transform .2s ease, border-color .2s ease;
-  }
-  .pkg:hover{transform:translateY(-4px)}
-  .pkg.featured{border-color:var(--honey);background:linear-gradient(180deg,rgba(223,162,58,.10),transparent 55%)}
-  .pkg .tag{
-    position:absolute;top:-12px;left:28px;
-    font-family:var(--mono);font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;
-    background:var(--honey);color:var(--ink);padding:5px 12px;border-radius:999px;font-weight:500;
-  }
-  .pkg .icon{font-size:1.5rem}
-  .pkg .name{font-family:var(--display);font-weight:700;font-size:1.4rem;margin:14px 0 4px}
-  .pkg .time{font-family:var(--mono);font-size:.78rem;color:var(--teal);margin-bottom:20px}
-  .pkg .price{font-family:var(--display);font-weight:700;font-size:2.6rem;letter-spacing:-.02em;line-height:1}
-  /* EDIT: price — the number after the $ is the visible price */
-  .pkg .price small{font-size:.95rem;color:var(--muted);font-weight:400;font-family:var(--body);letter-spacing:0}
-  .pkg ul{list-style:none;margin:24px 0 28px;display:flex;flex-direction:column;gap:11px}
-  .pkg li{font-size:.93rem;color:#D6D0C2;padding-left:26px;position:relative}
-  .pkg li::before{content:"";position:absolute;left:0;top:.5em;width:12px;height:2px;background:var(--honey);transform:rotate(-45deg)}
-  .pkg li b{color:var(--ivory);font-weight:600}
-  .pkg .pkg-cta{margin-top:auto}
-  .pkg .pkg-cta .btn{width:100%;text-align:center}
-  .addon{font-family:var(--mono);font-size:.8rem;color:var(--muted);margin-top:26px;text-align:center}
-
-  /* ---------- PROCESS (a real sequence, so numbers are earned) ---------- */
-  .process{background:var(--ink-2)}
-  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;position:relative}
-  .step .num{font-family:var(--mono);font-size:.8rem;color:var(--honey);border:1px solid var(--honey);border-radius:999px;width:38px;height:38px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
-  .step h4{font-family:var(--display);font-weight:600;font-size:1.1rem;margin-bottom:8px}
-  .step p{color:var(--muted);font-size:.9rem}
-
-  /* ---------- PROOF ---------- */
-  .quotes{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-bottom:40px}
-  .quote{background:var(--ink-2);border:1px solid var(--line);border-radius:18px;padding:30px}
-  .quote .stars{color:var(--honey);letter-spacing:3px;margin-bottom:14px}
-  .quote p{font-size:1.05rem;color:#E6E0D2;margin-bottom:18px;font-style:italic}
-  .quote .who{font-family:var(--mono);font-size:.8rem;color:var(--muted)}
-  .work{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-  .work-card{aspect-ratio:4/3;border-radius:14px;border:1px dashed var(--line);background:var(--ink-2);display:flex;align-items:center;justify-content:center;text-align:center;color:var(--muted);font-family:var(--mono);font-size:.8rem;padding:20px}
-
-  /* ---------- ABOUT ---------- */
-  .about-in{display:grid;grid-template-columns:1fr 1.3fr;gap:56px;align-items:center}
-  .about-photo{aspect-ratio:1;border-radius:20px;background:linear-gradient(135deg,var(--ink-2),var(--ink-3));border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--muted);font-family:var(--mono);font-size:.8rem;text-align:center;padding:24px}
-  .about-in h2{font-family:var(--display);font-weight:700;font-size:clamp(1.8rem,3.4vw,2.4rem);letter-spacing:-.015em;margin-bottom:18px;line-height:1.12}
-  .about-in p{color:#D2CCBE;margin-bottom:16px}
-
-  /* ---------- FINAL CTA ---------- */
-  .cta{background:linear-gradient(135deg,var(--honey),var(--honey-soft));color:var(--ink);text-align:center;border-radius:28px;padding:64px 32px;margin:0 28px}
-  .cta h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,4vw,3rem);letter-spacing:-.02em;margin-bottom:14px;line-height:1.05}
-  .cta p{font-size:1.1rem;max-width:520px;margin:0 auto 30px;color:#3a2c10}
-  .cta .btn-dark{background:var(--ink);color:var(--ivory);font-size:1rem;padding:15px 34px}
-  .cta .btn-dark:hover{transform:translateY(-2px)}
-
-  /* ---------- FOOTER ---------- */
-  footer{background:var(--ink-3);padding:48px 0;border-top:1px solid var(--line);margin-top:84px}
-  .foot-in{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
-  .foot-in .brand{font-size:1rem}
-  .foot-in a{color:var(--muted);font-size:.9rem;transition:color .2s}
-  .foot-in a:hover{color:var(--honey)}
-
-  /* ---------- reveal animation ---------- */
-  .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease, transform .7s ease}
+  /* reveal animation */
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
   .reveal.in{opacity:1;transform:none}
-  @media (prefers-reduced-motion:reduce){
-    .reveal{opacity:1;transform:none;transition:none}
-    html{scroll-behavior:auto}
-  }
+  @media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
 
-  /* ---------- responsive ---------- */
-  @media (max-width:900px){
-    .svc-grid,.pkg-grid,.steps,.quotes,.work{grid-template-columns:1fr}
-    .steps{gap:20px}
-    .about-in{grid-template-columns:1fr;gap:32px}
+  /* nav */
+  nav{position:sticky;top:0;z-index:50;border-bottom:1px solid var(--line);background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(12px)}
+  .nav-inner{display:flex;height:68px;align-items:center;justify-content:space-between}
+  .brand{font-family:var(--font-display);font-size:1.2rem;font-weight:600;letter-spacing:-.02em;color:var(--primary)}
+  .brand span{color:var(--clay)}
+  .nav-links{display:flex;align-items:center;gap:30px}
+  .nav-links a.link{font-size:.875rem;color:var(--muted-fg);transition:color .2s}
+  .nav-links a.link:hover{color:var(--primary)}
+  .menu-btn{display:none;font-size:1.25rem;color:var(--primary);background:none;border:none;cursor:pointer}
+  .mobile-menu{display:none;flex-direction:column;gap:18px;border-bottom:1px solid var(--surface-deep);background:var(--bg);padding:20px 28px}
+  .mobile-menu a.link{font-size:.875rem;color:var(--muted-fg)}
+  .mobile-menu.open{display:flex}
+
+  /* hero */
+  header{position:relative;overflow:hidden;padding:96px 0}
+  .hero-grid{position:absolute;inset:0;z-index:0;opacity:.6;pointer-events:none;
+    background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+    background-size:48px 48px;
+    -webkit-mask-image:radial-gradient(ellipse 80% 60% at 70% 30%,#000 20%,transparent 75%);
+    mask-image:radial-gradient(ellipse 80% 60% at 70% 30%,#000 20%,transparent 75%);}
+  .hero-content{position:relative;z-index:10;max-width:780px}
+  h1{font-family:var(--font-display);font-size:clamp(2.4rem,5.6vw,4rem);font-weight:600;line-height:1.06;letter-spacing:-.02em;color:var(--primary);margin:20px 0}
+  .hero-sub{margin-bottom:36px;max-width:600px;font-size:clamp(1.02rem,1.8vw,1.2rem);color:var(--muted-fg)}
+  .hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:14px}
+  .hero-note{margin-top:28px;max-width:460px;font-size:.85rem;color:var(--muted-fg)}
+
+  section{padding:84px 0}
+  .sec-head{margin-bottom:48px;max-width:620px}
+  .sec-head h2{font-family:var(--font-display);font-size:clamp(1.7rem,3.2vw,2.4rem);font-weight:600;line-height:1.15;letter-spacing:-.02em;color:var(--primary);margin:12px 0 10px}
+  .sec-head p{font-size:1.02rem;color:var(--muted-fg)}
+
+  /* services */
+  .bg-surface{background:var(--surface)}
+  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;overflow:hidden;border-radius:16px;border:1px solid var(--surface-deep);background:var(--surface-deep)}
+  .service{background:var(--surface);padding:30px 26px}
+  .service .tag{font-size:.72rem;font-weight:600;letter-spacing:.08em;color:var(--clay)}
+  .service h3{margin:12px 0 8px;font-family:var(--font-display);font-size:1.15rem;font-weight:600;color:var(--primary)}
+  .service p{font-size:.92rem;color:var(--muted-fg)}
+
+  /* solutions */
+  .solutions-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:44px}
+  .solution{border-radius:18px;border:1px solid var(--surface-deep);background:var(--bg);padding:32px 28px}
+  .solution h3{margin-bottom:10px;font-family:var(--font-display);font-size:1.2rem;font-weight:600;line-height:1.35;color:var(--primary)}
+  .solution p{font-size:.94rem;color:var(--muted-fg)}
+  .cta-strip{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;border-radius:18px;border:1px solid var(--surface-deep);background:var(--surface);padding:30px 34px}
+  .cta-strip p{max-width:440px;font-family:var(--font-display);font-size:1.15rem;color:var(--primary)}
+
+  /* process */
+  .steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+  .step .n{display:flex;width:38px;height:38px;align-items:center;justify-content:center;border-radius:999px;background:var(--primary);color:var(--primary-fg);font-family:var(--font-display);font-size:.9rem;font-weight:600;margin-bottom:16px}
+  .step h4{margin-bottom:8px;font-family:var(--font-display);font-size:1.08rem;font-weight:600;color:var(--primary)}
+  .step p{font-size:.9rem;color:var(--muted-fg)}
+
+  /* proof */
+  .testimonials-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-bottom:40px}
+  .testimonial{border-radius:18px;border:1px solid var(--surface-deep);background:var(--surface);padding:30px}
+  .stars{margin-bottom:14px;letter-spacing:3px;color:var(--clay)}
+  .testimonial blockquote{margin-bottom:16px;font-family:var(--font-display);font-size:1.08rem;font-style:italic;color:var(--primary)}
+  .testimonial .who{font-size:.82rem;color:var(--muted-fg)}
+  .work-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  .work figure{overflow:hidden;border-radius:16px;border:1px solid var(--surface-deep);background:var(--surface)}
+  .work .frame{max-height:520px;overflow:hidden}
+  .work img{width:100%;object-fit:cover}
+  .work figcaption{padding:16px 20px;font-size:.85rem;color:var(--muted-fg)}
+
+  /* about */
+  .about-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:56px;align-items:center}
+  .about-photo{aspect-ratio:1/1;overflow:hidden;border-radius:20px;border:1px solid var(--surface-deep);background:var(--surface)}
+  .about-photo img{width:100%;height:100%;object-fit:cover}
+  .about-text h2{margin-bottom:16px;font-family:var(--font-display);font-size:clamp(1.7rem,3vw,2.2rem);font-weight:600;line-height:1.2;letter-spacing:-.02em;color:var(--primary)}
+  .about-text p{margin-bottom:16px;color:var(--ink)}
+  .about-text .btn-primary{margin-top:12px}
+
+  /* final CTA */
+  .final{padding:0 28px 84px}
+  .final-card{border-radius:28px;background:var(--primary);color:var(--primary-fg);padding:64px 32px;text-align:center}
+  .final-card h2{margin-bottom:14px;font-family:var(--font-display);font-size:clamp(1.8rem,3.6vw,2.6rem);font-weight:600;line-height:1.15;letter-spacing:-.02em}
+  .final-card p{margin:0 auto 28px;max-width:480px;font-size:1.05rem;opacity:.8}
+  .final-card .btn-light{display:inline-block;border-radius:999px;background:var(--bg);color:var(--primary);padding:15px 34px;font-size:1rem;font-weight:600;transition:transform .15s ease}
+  .final-card .btn-light:hover{transform:translateY(-2px)}
+  .final-card .alt{display:block;margin-top:20px;font-size:.85rem;opacity:.8}
+  .final-card .alt a{border-bottom:1px solid currentColor}
+
+  /* footer */
+  footer{border-top:1px solid var(--surface-deep);background:var(--bg);padding:44px 0}
+  .footer-inner{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px}
+  .footer-links{display:flex;flex-wrap:wrap;gap:24px;font-size:.9rem;color:var(--muted-fg)}
+  .footer-links a{transition:color .2s}
+  .footer-links a:hover{color:var(--clay)}
+
+  @media (max-width:860px){
     .nav-links{display:none}
-    .nav-links.open{display:flex;position:absolute;top:68px;left:0;right:0;flex-direction:column;background:var(--ink-2);padding:20px 28px;gap:18px;border-bottom:1px solid var(--line)}
-    .nav-toggle{display:block}
-    .svc-grid{border-radius:16px}
+    .menu-btn{display:block}
+    .services-grid,.solutions-grid,.steps-grid,.testimonials-grid,.work-grid,.about-grid{grid-template-columns:1fr}
+    header{padding:72px 0}
   }
 </style>
 </head>
 <body>
 
-<!-- ============ NAV ============ -->
+<!-- NAV -->
 <nav>
-  <div class="wrap nav-in">
-    <!-- EDIT: brand -->
+  <div class="wrap nav-inner">
     <div class="brand">Joana<span>.</span> Roqueza</div>
-    <div class="nav-links" id="navLinks">
-      <a href="#services">Services</a>
-      <a href="#packages">Packages</a>
-      <a href="#process">How it works</a>
-      <a href="#proof">Work</a>
-      <!-- EDIT: contact — set your booking link -->
-      <a href="#contact" class="btn btn-gold">Book a call</a>
+    <div class="nav-links">
+      <a class="link" href="#services">Services</a>
+      <a class="link" href="#process">How it works</a>
+      <a class="link" href="#proof">Work</a>
+      <a class="btn-primary" href="https://calendly.com/workwithme-joana/30min" target="_blank" rel="noopener">Book a call</a>
     </div>
-    <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+    <button class="menu-btn" aria-label="Menu" onclick="document.getElementById('mmenu').classList.toggle('open')">☰</button>
+  </div>
+  <div class="mobile-menu" id="mmenu">
+    <a class="link" href="#services" onclick="document.getElementById('mmenu').classList.remove('open')">Services</a>
+    <a class="link" href="#process" onclick="document.getElementById('mmenu').classList.remove('open')">How it works</a>
+    <a class="link" href="#proof" onclick="document.getElementById('mmenu').classList.remove('open')">Work</a>
+    <a class="btn-primary" style="align-self:flex-start" href="https://calendly.com/workwithme-joana/30min" target="_blank" rel="noopener">Book a call</a>
   </div>
 </nav>
 
-<!-- ============ HERO ============ -->
-<header class="hero">
+<!-- HERO -->
+<header>
   <div class="hero-grid"></div>
-  <div class="wrap hero-in reveal">
-    <div class="eyebrow">GoHighLevel · Funnels · Automation</div>
-    <h1>Your website, funnel, and follow-up — <span class="accent">built to run without you.</span></h1>
-    <p class="lede">I set up the systems behind coaching and service businesses: landing pages, sales funnels, CRM, and the automations that turn a lead into a booked call — so the tech works while you do what you're actually good at.</p>
-    <div class="hero-cta">
-      <a href="#packages" class="btn btn-gold">See packages</a>
-      <a href="#contact" class="btn btn-ghost">Book a call</a>
+  <div class="wrap">
+    <div class="hero-content reveal">
+      <div class="eyebrow">GoHighLevel · Funnels · Automation</div>
+      <h1>Your website, funnel, and follow-up — built to run without you.</h1>
+      <p class="hero-sub">I set up the systems behind coaching and service businesses: landing pages, sales funnels, CRM, and the automations that turn a lead into a booked call. Before anything gets built, we talk through what you actually need.</p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="https://calendly.com/workwithme-joana/30min" target="_blank" rel="noopener">Book a free call</a>
+        <a class="btn-ghost" href="#process">See how it works</a>
+      </div>
+      <p class="hero-note">No pitch deck, no pressure — just 30 minutes to map out what's actually slowing your business down.</p>
     </div>
-    <div class="hero-note">Trusted by coaches, consultants &amp; real-estate pros · Delivered in days, not months</div>
   </div>
 </header>
 
-<!-- ============ SERVICES ============ -->
-<section class="services" id="services">
+<!-- SERVICES -->
+<section id="services" class="bg-surface">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div class="eyebrow">What I build</div>
+      <div class="eyebrow">What I help with</div>
       <h2>One person, the whole system</h2>
-      <p>You don't need a designer, a copywriter, a CRM person, and a "tech guy." You need someone who does all of it and hands you something that works.</p>
+      <p>You don't need a designer, a copywriter, a CRM person, and a “tech guy.” You need someone who understands all of it and hands you something that works.</p>
     </div>
-    <div class="svc-grid">
-      <div class="svc reveal"><div class="n">01</div><h3>Websites &amp; funnels</h3><p>Wix Studio and GoHighLevel builds — landing pages, sales funnels, and full sites that look right on every screen.</p></div>
-      <div class="svc reveal"><div class="n">02</div><h3>CRM setup &amp; migration</h3><p>GoHighLevel pipelines, tags, custom fields, and clean data — including moving you off whatever you're on now.</p></div>
-      <div class="svc reveal"><div class="n">03</div><h3>Email &amp; SMS automation</h3><p>Follow-up sequences, confirmations, reminders, and nurture flows that run the moment someone opts in.</p></div>
-      <div class="svc reveal"><div class="n">04</div><h3>Calendars &amp; booking</h3><p>Booking calendars, event registration, and reminder workflows wired straight into your CRM.</p></div>
-      <div class="svc reveal"><div class="n">05</div><h3>Memberships &amp; integrations</h3><p>Course/membership areas, plus Stripe, Zoom, webhooks, and the API connections that tie your tools together.</p></div>
-      <div class="svc reveal"><div class="n">06</div><h3>Domains &amp; DNS</h3><p>Domain connection, DNS records, and email deliverability set up properly the first time.</p></div>
+    <div class="services-grid">
+      <div class="service reveal">
+        <div class="tag">Foundations</div>
+        <h3>Websites &amp; funnels</h3>
+        <p>Wix Studio and GoHighLevel builds — landing pages, sales funnels, and full sites that look right on every screen.</p>
+      </div>
+      <div class="service reveal">
+        <div class="tag">Systems</div>
+        <h3>CRM setup &amp; migration</h3>
+        <p>GoHighLevel pipelines, tags, custom fields, and clean data — including moving you off whatever you're on now.</p>
+      </div>
+      <div class="service reveal">
+        <div class="tag">Automation</div>
+        <h3>Email &amp; SMS automation</h3>
+        <p>Follow-up sequences, confirmations, reminders, and nurture flows that run the moment someone opts in.</p>
+      </div>
+      <div class="service reveal">
+        <div class="tag">Booking</div>
+        <h3>Calendars &amp; booking</h3>
+        <p>Booking calendars, event registration, and reminder workflows wired straight into your CRM.</p>
+      </div>
+      <div class="service reveal">
+        <div class="tag">Growth</div>
+        <h3>Memberships &amp; integrations</h3>
+        <p>Course/membership areas, plus Stripe, Zoom, webhooks, and the API connections that tie your tools together.</p>
+      </div>
+      <div class="service reveal">
+        <div class="tag">Infrastructure</div>
+        <h3>Domains &amp; DNS</h3>
+        <p>Domain connection, DNS records, and email deliverability set up properly the first time.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ============ PACKAGES ============ -->
-<section id="packages">
+<!-- SOLUTIONS -->
+<section id="solutions">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div class="eyebrow">Packages</div>
-      <h2>Simple, fixed pricing</h2>
-      <p>Pick the outcome you need. Fixed price, clear timeline, no surprise invoices.</p>
+      <div class="eyebrow">Not sure where to start</div>
+      <h2>Tell me which one sounds like you</h2>
+      <p>Every business needs something different. Here's where most conversations start — we'll figure out the rest on the call.</p>
     </div>
-    <div class="pkg-grid">
-
-      <!-- LAUNCH -->
-      <div class="pkg reveal">
-        <div class="icon">🚀</div>
-        <div class="name">Launch</div>
-        <div class="time">2–3 business days</div>
-        <!-- EDIT: price -->
-        <div class="price">$297</div>
-        <ul>
-          <li><b>Landing page</b>, built &amp; branded</li>
-          <li>Calendar <b>booking</b> setup</li>
-          <li>Lead capture <b>forms</b></li>
-          <li>Automated <b>email confirmation</b></li>
-          <li><b>Domain connection</b></li>
-          <li>Fully <b>mobile-optimized</b></li>
-        </ul>
-        <div class="pkg-cta"><a href="#contact" class="btn btn-ghost">Start with Launch</a></div>
+    <div class="solutions-grid">
+      <div class="solution reveal">
+        <h3>"I don't have a real website or funnel yet."</h3>
+        <p>We start from your offer, not a template. I'll map out the simplest page or funnel that gets you booked calls or sales, and build it around what you already have.</p>
       </div>
-
-      <!-- GROWTH (featured) -->
-      <div class="pkg featured reveal">
-        <div class="tag">Most complete</div>
-        <div class="icon">📈</div>
-        <div class="name">Growth</div>
-        <div class="time">7–10 business days</div>
-        <!-- EDIT: price -->
-        <div class="price">$647</div>
-        <ul>
-          <li>Full <b>website or funnel</b></li>
-          <li>Complete <b>CRM setup</b> &amp; pipeline</li>
-          <li><b>Email + SMS</b> automations</li>
-          <li>Calendar &amp; <b>event booking</b></li>
-          <li><b>Integrations</b> (Stripe, Zoom, more)</li>
-          <li>Domain, DNS &amp; mobile polish</li>
-        </ul>
-        <div class="pkg-cta"><a href="#contact" class="btn btn-gold">Build my system</a></div>
+      <div class="solution reveal">
+        <h3>"I have one, but it's not converting."</h3>
+        <p>Sometimes it's the page, sometimes it's what happens after someone clicks. I'll look at the whole path — page, follow-up, booking — and tell you honestly what's worth fixing.</p>
       </div>
-
-      <!-- MONTHLY -->
-      <div class="pkg reveal">
-        <div class="icon">🔄</div>
-        <div class="name">Monthly Care</div>
-        <div class="time">Ongoing · 5 hrs / month</div>
-        <!-- EDIT: price -->
-        <div class="price">$150<small>/mo</small></div>
-        <ul>
-          <li>Website &amp; <b>workflow updates</b></li>
-          <li><b>Calendar</b> &amp; event management</li>
-          <li>Minor <b>funnel edits</b></li>
-          <li>Ongoing <b>tech support</b></li>
-          <li>Priority turnaround</li>
-          <li>Up to <b>5 hours</b> each month</li>
-        </ul>
-        <div class="pkg-cta"><a href="#contact" class="btn btn-ghost">Keep me on retainer</a></div>
+      <div class="solution reveal">
+        <h3>"I'm buried in manual follow-up and admin."</h3>
+        <p>If you're the one sending reminders and chasing leads by hand, that's automation's job. We'll find the repetitive parts first and take them off your plate.</p>
       </div>
-
     </div>
-    <div class="addon">Extra work beyond a package is $15/hr or quoted as its own project — always agreed before I start.</div>
+    <div class="cta-strip reveal">
+      <p>Whichever it is, the first step is the same: a free 30-minute call to talk it through.</p>
+      <a class="btn-primary" href="https://calendly.com/workwithme-joana/30min" target="_blank" rel="noopener">Book a free call</a>
+    </div>
   </div>
 </section>
 
-<!-- ============ PROCESS ============ -->
-<section class="process" id="process">
+<!-- PROCESS -->
+<section id="process" class="bg-surface">
   <div class="wrap">
     <div class="sec-head reveal">
       <div class="eyebrow">How it works</div>
-      <h2>From "let's do it" to live</h2>
+      <h2>From "let's talk" to live</h2>
       <p>A clear path, so you always know what's next.</p>
     </div>
-    <div class="steps">
-      <div class="step reveal"><div class="num">1</div><h4>Quick call</h4><p>We talk through your goal, your offer, and what you already have. I confirm the right package.</p></div>
-      <div class="step reveal"><div class="num">2</div><h4>You send assets</h4><p>Logo, brand colors, photos, and copy. I give you a simple checklist so nothing gets missed.</p></div>
-      <div class="step reveal"><div class="num">3</div><h4>I build</h4><p>I put the whole system together, test every button and automation, and keep you posted.</p></div>
-      <div class="step reveal"><div class="num">4</div><h4>Review &amp; launch</h4><p>You review, we fine-tune, then it goes live — with a walkthrough so you know how to use it.</p></div>
+    <div class="steps-grid">
+      <div class="step reveal">
+        <div class="n">1</div>
+        <h4>Free call</h4>
+        <p>We talk through your goal, your offer, and what you already have. No pressure — just clarity on what would actually help.</p>
+      </div>
+      <div class="step reveal">
+        <div class="n">2</div>
+        <h4>You send assets</h4>
+        <p>Logo, brand colors, photos, and copy. I give you a simple checklist so nothing gets missed.</p>
+      </div>
+      <div class="step reveal">
+        <div class="n">3</div>
+        <h4>I build</h4>
+        <p>I put the whole system together, test every button and automation, and keep you posted.</p>
+      </div>
+      <div class="step reveal">
+        <div class="n">4</div>
+        <h4>Review &amp; launch</h4>
+        <p>You review, we fine-tune, then it goes live — with a walkthrough so you know how to use it.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ============ PROOF ============ -->
+<!-- PROOF -->
 <section id="proof">
   <div class="wrap">
     <div class="sec-head reveal">
       <div class="eyebrow">Proof</div>
       <h2>Recent work &amp; kind words</h2>
-      <p>Real projects for real businesses. Swap these in as you collect them.</p>
+      <p>Real projects for real businesses.</p>
     </div>
-
-    <div class="quotes">
-      <!-- EDIT: testimonial — replace quote + name -->
-      <div class="quote reveal">
+    <div class="testimonials-grid">
+      <div class="testimonial reveal">
         <div class="stars">★★★★★</div>
-        <p>“[ Paste a real client quote here — one or two sentences about what changed for their business. ]”</p>
-        <div class="who">— Client name, business / role</div>
+        <blockquote>“I LOVE LOVE LOVE the layout of the interest landing page!”</blockquote>
+        <div class="who">— Schutte</div>
       </div>
-      <div class="quote reveal">
+      <div class="testimonial reveal">
         <div class="stars">★★★★★</div>
-        <p>“[ Second testimonial goes here. Short and specific beats long and vague. ]”</p>
-        <div class="who">— Client name, business / role</div>
+        <blockquote>“YASSSSSSSSS aweeee thanks chica! ❤️ I was just telling my husband about you and all the work you've done. He's so glad that I have you.”</blockquote>
+        <div class="who">— Yahaira Stewart</div>
       </div>
     </div>
-
-    <!-- EDIT: work — replace each box with a screenshot: <img src="your-image.jpg" alt=""> -->
-    <div class="work">
-      <div class="work-card reveal">Add a screenshot<br>of a funnel or site you built</div>
-      <div class="work-card reveal">Add a before / after<br>or a results snapshot</div>
-      <div class="work-card reveal">Add another project<br>you're proud of</div>
+    <div class="work-grid">
+      <figure class="work reveal">
+        <div class="frame"><img src="https://id-preview--790bb4d5-4b70-421f-9730-2f40edbcb550.lovable.app/__l5e/assets-v1/a7b1c2af-77a6-4900-a742-38faeb2edfbd/work-yms-bold.png" alt="YMS B.O.L.D. Moves experiences website built for Yahaira Stewart" loading="lazy"></div>
+        <figcaption>YMS B.O.L.D. Moves — event &amp; experience site</figcaption>
+      </figure>
+      <figure class="work reveal">
+        <div class="frame"><img src="https://id-preview--790bb4d5-4b70-421f-9730-2f40edbcb550.lovable.app/__l5e/assets-v1/25b2fcb1-e56d-4f0f-82b4-b17ce22bf363/work-sales-narrative.png" alt="Sales narrative workshop interest landing page" loading="lazy"></div>
+        <figcaption>Sales Narrative Workshop — interest landing page</figcaption>
+      </figure>
     </div>
   </div>
 </section>
 
-<!-- ============ ABOUT ============ -->
+<!-- ABOUT -->
 <section>
-  <div class="wrap about-in">
-    <!-- EDIT: work — drop a photo of yourself here: <img src="you.jpg" alt="Joana"> -->
-    <div class="about-photo reveal">Add a friendly<br>photo of yourself</div>
-    <div class="reveal">
+  <div class="wrap about-grid">
+    <div class="about-photo reveal">
+      <img src="https://id-preview--790bb4d5-4b70-421f-9730-2f40edbcb550.lovable.app/__l5e/assets-v1/3ee7dcbb-6021-431c-a889-12e7ff848eba/joana.png" alt="Joana Roqueza" loading="lazy">
+    </div>
+    <div class="about-text reveal">
       <div class="eyebrow">Who you're working with</div>
-      <!-- EDIT: bio -->
       <h2>Hi, I'm Joana.</h2>
-      <p>I'm a GoHighLevel and funnel specialist who's spent the last year building websites, CRMs, and automations for coaches, consultants, and service businesses — the kind of tech that quietly runs in the background so my clients can stay focused on their clients.</p>
-      <p>I like clear communication, tidy systems, and handing over something that just works. If you'd rather not touch the technical side of your business, that's exactly where I come in.</p>
-      <a href="#contact" class="btn btn-gold" style="margin-top:12px">Let's talk</a>
+      <p>I'm a GoHighLevel and funnel specialist. I build the websites, CRMs, and automations that run quietly behind coaching, consulting, and service businesses, so the tech does its job and stays out of your way.</p>
+      <p>I like clear communication, tidy systems, and handing over something that just works. If you'd rather not touch the technical side of your business, that's exactly where I come in — and the first conversation is always free.</p>
+      <a class="btn-primary" href="https://calendly.com/workwithme-joana/30min" target="_blank" rel="noopener">Let's talk</a>
     </div>
   </div>
 </section>
 
-<!-- ============ FINAL CTA ============ -->
-<section id="contact" style="padding-top:0">
-  <div class="cta reveal">
-    <h2>Ready to get your system built?</h2>
-    <p>Tell me what you're working on and I'll recommend the right package. No pressure, no jargon.</p>
-    <!-- EDIT: contact — set your booking link or email below -->
-    <a href="mailto:youremail@example.com" class="btn btn-dark">Book a call</a>
+<!-- FINAL CTA -->
+<div class="final" id="contact">
+  <div class="final-card reveal">
+    <h2>Ready to figure out what you actually need?</h2>
+    <p>No packages to pick from up front — just a conversation about your business, and a clear next step after.</p>
+    <a class="btn-light" href="https://calendly.com/workwithme-joana/30min" target="_blank" rel="noopener">Book a free call</a>
+    <span class="alt">or email me directly at <a href="mailto:joanaroqueza@gmail.com">joanaroqueza@gmail.com</a></span>
   </div>
-</section>
+</div>
 
-<!-- ============ FOOTER ============ -->
+<!-- FOOTER -->
 <footer>
-  <div class="wrap foot-in">
-    <div class="brand">Joana<span style="color:var(--honey)">.</span> Roqueza</div>
-    <div style="display:flex;gap:24px;flex-wrap:wrap">
-      <!-- EDIT: contact -->
-      <a href="mailto:youremail@example.com">youremail@example.com</a>
-      <a href="#packages">Packages</a>
-      <a href="#contact">Book a call</a>
+  <div class="wrap footer-inner">
+    <div class="brand">Joana<span>.</span> Roqueza</div>
+    <div class="footer-links">
+      <a href="mailto:joanaroqueza@gmail.com">joanaroqueza@gmail.com</a>
+      <a href="#services">Services</a>
+      <a href="https://calendly.com/workwithme-joana/30min" target="_blank" rel="noopener">Book a call</a>
     </div>
   </div>
 </footer>
 
 <script>
-  // mobile menu
-  var t=document.getElementById('navToggle'),l=document.getElementById('navLinks');
-  if(t){t.addEventListener('click',function(){l.classList.toggle('open')});
-    l.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){l.classList.remove('open')})});}
-
-  // scroll reveal
-  var io=new IntersectionObserver(function(entries){
-    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
-  },{threshold:.12});
-  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
 </script>
 </body>
 </html>
