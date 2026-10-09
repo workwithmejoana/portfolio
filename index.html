@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -95,6 +94,18 @@
   .step h4{margin-bottom:8px;font-family:var(--font-display);font-size:1.08rem;font-weight:600;color:var(--primary)}
   .step p{font-size:.9rem;color:var(--muted-fg)}
 
+  /* recent projects */
+  .projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .project{display:flex;flex-direction:column;border-radius:18px;border:1px solid var(--surface-deep);background:var(--surface);padding:28px 26px;transition:transform .2s ease,box-shadow .2s ease}
+  .project:hover{transform:translateY(-3px);box-shadow:var(--shadow-soft)}
+  .project .kind{font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--clay)}
+  .project h3{margin:10px 0 4px;font-family:var(--font-display);font-size:1.2rem;font-weight:600;line-height:1.3;color:var(--primary)}
+  .project .client{margin-bottom:12px;font-size:.82rem;color:var(--muted-fg)}
+  .project p{font-size:.92rem;color:var(--muted-fg);margin-bottom:16px}
+  .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto}
+  .chips span{border-radius:999px;border:1px solid var(--surface-deep);background:var(--bg);padding:3px 11px;font-size:.72rem;font-weight:600;color:var(--ink)}
+  .projects-note{margin-top:28px;font-size:.88rem;color:var(--muted-fg)}
+
   /* proof */
   .testimonials-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-bottom:40px}
   .testimonial{border-radius:18px;border:1px solid var(--surface-deep);background:var(--surface);padding:30px}
@@ -135,7 +146,7 @@
   @media (max-width:860px){
     .nav-links{display:none}
     .menu-btn{display:block}
-    .services-grid,.solutions-grid,.steps-grid,.testimonials-grid,.work-grid,.about-grid{grid-template-columns:1fr}
+    .services-grid,.solutions-grid,.steps-grid,.projects-grid,.testimonials-grid,.work-grid,.about-grid{grid-template-columns:1fr}
     header{padding:72px 0}
   }
 </style>
@@ -148,6 +159,7 @@
     <div class="brand">Joana<span>.</span> Roqueza</div>
     <div class="nav-links">
       <a class="link" href="#services">Services</a>
+      <a class="link" href="#projects">Projects</a>
       <a class="link" href="#process">How it works</a>
       <a class="link" href="#proof">Work</a>
       <a class="btn-primary" href="https://calendly.com/workwithme-joana/30min" target="_blank" rel="noopener">Book a call</a>
@@ -156,6 +168,7 @@
   </div>
   <div class="mobile-menu" id="mmenu">
     <a class="link" href="#services" onclick="document.getElementById('mmenu').classList.remove('open')">Services</a>
+    <a class="link" href="#projects" onclick="document.getElementById('mmenu').classList.remove('open')">Projects</a>
     <a class="link" href="#process" onclick="document.getElementById('mmenu').classList.remove('open')">How it works</a>
     <a class="link" href="#proof" onclick="document.getElementById('mmenu').classList.remove('open')">Work</a>
     <a class="btn-primary" style="align-self:flex-start" href="https://calendly.com/workwithme-joana/30min" target="_blank" rel="noopener">Book a call</a>
@@ -172,7 +185,7 @@
       <p class="hero-sub">I set up the systems behind coaching and service businesses: landing pages, sales funnels, CRM, and the automations that turn a lead into a booked call. Before anything gets built, we talk through what you actually need.</p>
       <div class="hero-actions">
         <a class="btn-primary" href="https://calendly.com/workwithme-joana/30min" target="_blank" rel="noopener">Book a free call</a>
-        <a class="btn-ghost" href="#process">See how it works</a>
+        <a class="btn-ghost" href="#projects">See recent projects</a>
       </div>
       <p class="hero-note">No pitch deck, no pressure — just 30 minutes to map out what's actually slowing your business down.</p>
     </div>
@@ -222,8 +235,95 @@
   </div>
 </section>
 
+<!-- RECENT PROJECTS -->
+<section id="projects">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Recent projects</div>
+      <h2>What I've been building lately</h2>
+      <p>A look at recent client work — from event funnels and AI-powered assessments to full brand sites and reporting.</p>
+    </div>
+    <div class="projects-grid">
+
+      <article class="project reveal">
+        <div class="kind">Funnel + AI tool</div>
+        <h3>Buy Smart Plan Assessment</h3>
+        <div class="client">Buy Smart Philly · Real estate</div>
+        <p>An AI-powered buyer assessment that scores each lead, routes them to the right next step, and sends results into the CRM — with a resume-link so people can pick up where they left off.</p>
+        <div class="chips"><span>Claude API</span><span>GHL webhooks</span><span>Calendar routing</span></div>
+      </article>
+
+      <article class="project reveal">
+        <div class="kind">Event funnel</div>
+        <h3>Find Your Buying Power</h3>
+        <div class="client">Buy Smart Philly · Real estate</div>
+        <p>A five-day event funnel: sales page, intake form, and the email and SMS sequences that carry registrants from sign-up to booked call.</p>
+        <div class="chips"><span>Sales page</span><span>Intake form</span><span>Email + SMS</span></div>
+      </article>
+
+      <article class="project reveal">
+        <div class="kind">Landing + thank-you pages</div>
+        <h3>90-Day Buyer Representation Program</h3>
+        <div class="client">Buy Smart Philly · Real estate</div>
+        <p>Landing, confirmation, and thank-you pages in a navy-and-gold brand system, with form submissions flowing straight into GoHighLevel.</p>
+        <div class="chips"><span>Landing page</span><span>Thank-you page</span><span>GHL webhook</span></div>
+      </article>
+
+      <article class="project reveal">
+        <div class="kind">Event site</div>
+        <h3>B.O.L.D. Moves™ Experiences</h3>
+        <div class="client">Yahaira M. Stewart</div>
+        <p>A multi-page event site with a gallery, registration forms, a speaker application with headshot upload, and a custom design system.</p>
+        <div class="chips"><span>Multi-page site</span><span>Forms</span><span>Animations</span></div>
+      </article>
+
+      <article class="project reveal">
+        <div class="kind">Brand site</div>
+        <h3>YMS Consulting</h3>
+        <div class="client">Yahaira M. Stewart</div>
+        <p>A five-page brand site rebuilt for reliability — including a mobile navigation that works on every device, Android included.</p>
+        <div class="chips"><span>5-page site</span><span>Mobile-first</span><span>Responsive nav</span></div>
+      </article>
+
+      <article class="project reveal">
+        <div class="kind">Workshop landing page</div>
+        <h3>Sales Narrative Workshop</h3>
+        <div class="client">Be Brilliant Presentation Group</div>
+        <p>An interest landing page refined over several rounds: image crops, consolidated testimonials, scroll animations, and a webhook-connected form.</p>
+        <div class="chips"><span>Landing page</span><span>Testimonials</span><span>GHL form</span></div>
+      </article>
+
+      <article class="project reveal">
+        <div class="kind">Site revamp</div>
+        <h3>Luna Wellness</h3>
+        <div class="client">Reena Sifer · Human Design coaching</div>
+        <p>A full site revamp with a teal, orange, and gold brand system, plus SEO optimization and schema markup — and a dedicated Oracle Insight Readings landing page.</p>
+        <div class="chips"><span>Full site</span><span>SEO + schema</span><span>Premium animation</span></div>
+      </article>
+
+      <article class="project reveal">
+        <div class="kind">Full site build</div>
+        <h3>Honey Bee Academy &amp; Consulting</h3>
+        <div class="client">Honey Bee Academy</div>
+        <p>A complete multi-page site built with real content from the existing Wix pages, alongside a parent handbook and meeting documentation.</p>
+        <div class="chips"><span>Multi-page site</span><span>Content migration</span><span>Documents</span></div>
+      </article>
+
+      <article class="project reveal">
+        <div class="kind">Tracking &amp; reporting</div>
+        <h3>LNC Accelerator X</h3>
+        <div class="client">Steph Edwards · StephanAI</div>
+        <p>GoHighLevel tracking, webinar stats reporting, and spreadsheet reconciliation — plus a case study and a full communications and content calendar.</p>
+        <div class="chips"><span>GHL tracking</span><span>Reporting</span><span>Content plan</span></div>
+      </article>
+
+    </div>
+    <p class="projects-note reveal">Also: GoHighLevel CRM cleanup and contact-data normalization, and lead-nurture workflow setups for coaches and service businesses.</p>
+  </div>
+</section>
+
 <!-- SOLUTIONS -->
-<section id="solutions">
+<section id="solutions" class="bg-surface">
   <div class="wrap">
     <div class="sec-head reveal">
       <div class="eyebrow">Not sure where to start</div>
@@ -252,7 +352,7 @@
 </section>
 
 <!-- PROCESS -->
-<section id="process" class="bg-surface">
+<section id="process">
   <div class="wrap">
     <div class="sec-head reveal">
       <div class="eyebrow">How it works</div>
@@ -285,7 +385,7 @@
 </section>
 
 <!-- PROOF -->
-<section id="proof">
+<section id="proof" class="bg-surface">
   <div class="wrap">
     <div class="sec-head reveal">
       <div class="eyebrow">Proof</div>
@@ -350,6 +450,7 @@
     <div class="footer-links">
       <a href="mailto:joanaroqueza@gmail.com">joanaroqueza@gmail.com</a>
       <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
       <a href="https://calendly.com/workwithme-joana/30min" target="_blank" rel="noopener">Book a call</a>
     </div>
   </div>
