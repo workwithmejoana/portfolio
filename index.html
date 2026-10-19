@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Joana Roqueza — Websites, Funnels &amp; Automation</title>
+<link rel="icon" type="image/png" href="img/logo.png">
+<meta property="og:title" content="Joana Roqueza — Websites, Funnels &amp; Automation">
+<meta property="og:type" content="website">
 <meta name="description" content="Websites, funnels, CRM and automation for coaches and service businesses — built with you, not sold at you. See recent projects.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -106,6 +109,14 @@
   .chips span{border-radius:999px;border:1px solid var(--surface-deep);background:var(--bg);padding:3px 11px;font-size:.72rem;font-weight:600;color:var(--ink)}
   .projects-note{margin-top:28px;font-size:.88rem;color:var(--muted-fg)}
 
+  /* tools */
+  .tools-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .tool{border-radius:16px;border:1px solid var(--surface-deep);background:var(--bg);padding:24px 22px;transition:transform .2s ease,box-shadow .2s ease}
+  .tool:hover{transform:translateY(-3px);box-shadow:var(--shadow-soft)}
+  .tool .mono{display:inline-flex;min-width:40px;height:40px;padding:0 10px;align-items:center;justify-content:center;border-radius:12px;background:var(--primary);color:var(--primary-fg);font-family:var(--font-display);font-size:.95rem;font-weight:600;margin-bottom:14px}
+  .tool h3{margin-bottom:4px;font-family:var(--font-display);font-size:1.08rem;font-weight:600;color:var(--primary)}
+  .tool p{font-size:.86rem;color:var(--muted-fg)}
+
   /* proof */
   .testimonials-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-bottom:40px}
   .testimonial{border-radius:18px;border:1px solid var(--surface-deep);background:var(--surface);padding:30px}
@@ -147,33 +158,60 @@
     .nav-links{display:none}
     .menu-btn{display:block}
     .services-grid,.solutions-grid,.steps-grid,.projects-grid,.testimonials-grid,.work-grid,.about-grid{grid-template-columns:1fr}
+    .tools-grid{grid-template-columns:repeat(2,1fr)}
     header{padding:72px 0}
   }
+
+  .brand{display:inline-flex;align-items:center;gap:10px}
+  .brand img{width:30px;height:30px;object-fit:contain}
+  .tool .icon{display:inline-flex;width:44px;height:44px;align-items:center;justify-content:center;border-radius:12px;background:var(--surface);border:1px solid var(--surface-deep);margin-bottom:14px;font-family:var(--font-display);font-weight:600;font-size:.85rem;color:var(--primary)}
+  .tool .icon img{width:22px;height:22px}
+  .work-head{margin:64px 0 28px;max-width:620px}
+  .work-head h3{font-family:var(--font-display);font-size:clamp(1.4rem,2.6vw,1.9rem);font-weight:600;color:var(--primary);margin-top:8px;letter-spacing:-.02em}
+  .work-grid{grid-template-columns:repeat(3,1fr);gap:22px}
+  .work{margin:0;overflow:hidden;border-radius:16px;border:1px solid var(--surface-deep);background:var(--surface);transition:transform .2s ease,box-shadow .2s ease}
+  .work:hover{transform:translateY(-3px);box-shadow:var(--shadow-lift)}
+  .work .bar{display:flex;gap:6px;padding:10px 14px;border-bottom:1px solid var(--surface-deep);background:var(--bg)}
+  .work .bar i{width:9px;height:9px;border-radius:50%;background:var(--surface-deep)}
+  .work .frame{aspect-ratio:4/3.4;overflow:hidden;max-height:none}
+  .work .frame img{width:100%;height:auto;transition:transform 2.5s ease}
+  .work:hover .frame img{transform:translateY(-12%)}
+  .work figcaption{padding:16px 20px}
+  .work figcaption strong{display:block;font-family:var(--font-display);font-size:1.05rem;color:var(--primary);font-weight:600}
+  .work figcaption span{font-size:.82rem;color:var(--muted-fg)}
+  .footer-copy{font-size:.8rem;color:var(--muted-fg)}
+  :focus-visible{outline:2px solid var(--clay);outline-offset:3px;border-radius:6px}
+  @media (max-width:900px){.work-grid{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:600px){.work-grid{grid-template-columns:1fr}}
+  @media (prefers-reduced-motion: reduce){.work:hover .frame img{transform:none}}
 </style>
 </head>
-<body>
+<body id="top">
 
 <!-- NAV -->
 <nav>
   <div class="wrap nav-inner">
-    <div class="brand">Joana<span>.</span> Roqueza</div>
+    <a class="brand" href="#top" aria-label="Joana Roqueza home"><img src="img/logo.png" alt="" width="30" height="30">Joana<span>.</span> Roqueza</a>
     <div class="nav-links">
       <a class="link" href="#services">Services</a>
       <a class="link" href="#projects">Projects</a>
       <a class="link" href="#process">How it works</a>
+      <a class="link" href="#tools">Tools</a>
       <a class="link" href="#proof">Work</a>
     </div>
-    <button class="menu-btn" aria-label="Menu" onclick="document.getElementById('mmenu').classList.toggle('open')">☰</button>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mmenu">☰</button>
   </div>
   <div class="mobile-menu" id="mmenu">
-    <a class="link" href="#services" onclick="document.getElementById('mmenu').classList.remove('open')">Services</a>
-    <a class="link" href="#projects" onclick="document.getElementById('mmenu').classList.remove('open')">Projects</a>
-    <a class="link" href="#process" onclick="document.getElementById('mmenu').classList.remove('open')">How it works</a>
-    <a class="link" href="#proof" onclick="document.getElementById('mmenu').classList.remove('open')">Work</a>
+    <a class="link" href="#services">Services</a>
+    <a class="link" href="#projects">Projects</a>
+    <a class="link" href="#process">How it works</a>
+    <a class="link" href="#tools">Tools</a>
+    <a class="link" href="#proof">Work</a>
   </div>
 </nav>
 
 <!-- HERO -->
+<main>
 <header>
   <div class="hero-grid"></div>
   <div class="wrap">
@@ -377,8 +415,63 @@
   </div>
 </section>
 
+<!-- TOOLS -->
+<section id="tools" class="bg-surface">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Tools I work in</div>
+      <h2>The stack behind the builds</h2>
+      <p>I'm hands-on with the platforms your business already runs on, and I connect them so they work as one system.</p>
+    </div>
+    <div class="tools-grid">
+      <div class="tool reveal">
+        <div class="icon" aria-hidden="true">GHL</div>
+        <h3>GoHighLevel</h3>
+        <p>CRM, pipelines, funnels, workflows, calendars and webhooks.</p>
+      </div>
+      <div class="tool reveal">
+        <div class="icon"><img src="img/tools/claude.svg" alt="" width="22" height="22"></div>
+        <h3>Claude</h3>
+        <p>Building pages and tools, API integrations, and documentation.</p>
+      </div>
+      <div class="tool reveal">
+        <div class="icon" aria-hidden="true">Lv</div>
+        <h3>Lovable</h3>
+        <p>Fast site builds and prototypes, taken from idea to live page.</p>
+      </div>
+      <div class="tool reveal">
+        <div class="icon" aria-hidden="true">GPT</div>
+        <h3>ChatGPT</h3>
+        <p>Drafting, research and brainstorming alongside the build.</p>
+      </div>
+      <div class="tool reveal">
+        <div class="icon"><img src="img/tools/zapier.svg" alt="" width="22" height="22"></div>
+        <h3>Zapier</h3>
+        <p>Connecting apps so data moves without manual copy-paste.</p>
+      </div>
+      <div class="tool reveal">
+        <div class="icon"><img src="img/tools/make.svg" alt="" width="22" height="22"></div>
+        <h3>Make</h3>
+        <p>Multi-step automations and integrations between your tools.</p>
+      </div>
+      <div class="tool reveal">
+        <div class="icon"><img src="img/tools/google.svg" alt="" width="22" height="22"></div>
+        <h3>Google Workspace</h3>
+        <p>Sheets, Drive, Calendar, Forms and Apps Script for reporting and forms.</p>
+      </div>
+      <div class="tool reveal">
+        <div class="icon"><img src="img/tools/zoom.svg" alt="" width="22" height="22"></div>
+        <h3>Zoom</h3>
+        <p>Webinars and meetings connected to registration and reminders.</p>
+      </div>
+    <div class="tool reveal"><div class="icon"><img src="img/tools/stripe.svg" alt="" width="22" height="22"></div><h3>Stripe</h3><p>Payments and checkout wired into funnels, events and memberships.</p></div>
+<div class="tool reveal"><div class="icon"><img src="img/tools/wix.svg" alt="" width="22" height="22"></div><h3>Wix Studio</h3><p>Responsive brand sites and content migrations for service businesses.</p></div>
+</div>
+  </div>
+</section>
+
 <!-- PROOF -->
-<section id="proof" class="bg-surface">
+<section id="proof">
   <div class="wrap">
     <div class="sec-head reveal">
       <div class="eyebrow">Proof</div>
@@ -397,21 +490,19 @@
         <div class="who">— Yahaira Stewart</div>
       </div>
     </div>
-    <div class="work-grid">
-      <figure class="work reveal">
-        <div class="frame"><img src="https://id-preview--790bb4d5-4b70-421f-9730-2f40edbcb550.lovable.app/__l5e/assets-v1/a7b1c2af-77a6-4900-a742-38faeb2edfbd/work-yms-bold.png" alt="YMS B.O.L.D. Moves experiences website built for Yahaira Stewart" loading="lazy"></div>
-        <figcaption>YMS B.O.L.D. Moves — event &amp; experience site</figcaption>
-      </figure>
-      <figure class="work reveal">
-        <div class="frame"><img src="https://id-preview--790bb4d5-4b70-421f-9730-2f40edbcb550.lovable.app/__l5e/assets-v1/25b2fcb1-e56d-4f0f-82b4-b17ce22bf363/work-sales-narrative.png" alt="Sales narrative workshop interest landing page" loading="lazy"></div>
-        <figcaption>Sales Narrative Workshop — interest landing page</figcaption>
-      </figure>
-    </div>
+    <div class="work-head reveal"><div class="eyebrow">Page previews</div><h3>A peek at pages I’ve built</h3></div>
+<div class="work-grid">
+<figure class="work reveal"><div class="bar" aria-hidden="true"><i></i><i></i><i></i></div><div class="frame"><img src="img/work/standing-out.jpg" alt="Preview of the Standing Out Summer Series page" loading="lazy"></div><figcaption><strong>Standing Out Summer Series</strong><span>Six-event networking series · Patti Schutte</span></figcaption></figure>
+<figure class="work reveal"><div class="bar" aria-hidden="true"><i></i><i></i><i></i></div><div class="frame"><img src="img/work/sales-narrative.jpg" alt="Preview of the Sales Narrative Workshop page" loading="lazy"></div><figcaption><strong>Sales Narrative Workshop</strong><span>Workshop landing page · Be Brilliant Presentation Group</span></figcaption></figure>
+<figure class="work reveal"><div class="bar" aria-hidden="true"><i></i><i></i><i></i></div><div class="frame"><img src="img/work/yms-consulting.jpg" alt="Preview of the YMS Consulting page" loading="lazy"></div><figcaption><strong>YMS Consulting</strong><span>Brand site · Yahaira M. Stewart</span></figcaption></figure>
+<figure class="work reveal"><div class="bar" aria-hidden="true"><i></i><i></i><i></i></div><div class="frame"><img src="img/work/bold-moves.jpg" alt="Preview of the B.O.L.D. Moves™ Experiences page" loading="lazy"></div><figcaption><strong>B.O.L.D. Moves™ Experiences</strong><span>Event site · Yahaira M. Stewart</span></figcaption></figure>
+<figure class="work reveal"><div class="bar" aria-hidden="true"><i></i><i></i><i></i></div><div class="frame"><img src="img/work/honey-bee.jpg" alt="Preview of the Honey Bee Academy page" loading="lazy"></div><figcaption><strong>Honey Bee Academy</strong><span>Full site build · Early learning</span></figcaption></figure>
+</div>
   </div>
 </section>
 
 <!-- ABOUT -->
-<section>
+<section class="bg-surface">
   <div class="wrap about-grid">
     <div class="about-photo reveal">
       <img src="https://id-preview--790bb4d5-4b70-421f-9730-2f40edbcb550.lovable.app/__l5e/assets-v1/3ee7dcbb-6021-431c-a889-12e7ff848eba/joana.png" alt="Joana Roqueza" loading="lazy">
@@ -425,25 +516,33 @@
   </div>
 </section>
 
+</main>
 <!-- FOOTER -->
 <footer>
   <div class="wrap footer-inner">
-    <div class="brand">Joana<span>.</span> Roqueza</div>
+    <a class="brand" href="#top" aria-label="Joana Roqueza home"><img src="img/logo.png" alt="" width="30" height="30">Joana<span>.</span> Roqueza</a>
     <div class="footer-links">
       <a href="#services">Services</a>
       <a href="#projects">Projects</a>
+      <a href="#tools">Tools</a>
       <a href="#proof">Work</a>
     </div>
-  </div>
+  <p class="footer-copy">© <span id="yr"></span> Joana Roqueza</p>
+</div>
 </footer>
 
 <script>
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach((e) => {
-      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-    });
-  }, { threshold: 0.12 });
-  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+(() => {
+  const btn = document.getElementById('menuBtn'), menu = document.getElementById('mmenu');
+  const setOpen = (o) => { menu.classList.toggle('open', o); btn.setAttribute('aria-expanded', o); btn.setAttribute('aria-label', o ? 'Close menu' : 'Open menu'); };
+  btn.addEventListener('click', () => setOpen(!menu.classList.contains('open')));
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setOpen(false)));
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  const els = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window)) { els.forEach(e => e.classList.add('in')); return; }
+  const io = new IntersectionObserver((entries) => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: 0.12 });
+  els.forEach(el => io.observe(el));
+})();
 </script>
 </body>
 </html>
